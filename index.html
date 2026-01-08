@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -259,7 +260,6 @@
             -o-transform: translateY(-8px) rotateZ(-45deg);
             /* Opera */
         }
-
         .left-bar {
             position: fixed;
             top: 50px;
@@ -285,6 +285,9 @@
             /* Safari  Chrome */
             -o-transform: translateZ(0);
             /* Opera */
+        }
+        .left-bar.show-left-bar {
+            left: 0;
         }
 
         .left-bar .header {
@@ -2848,8 +2851,10 @@
                 return 'pc';
             }
         }
+        
         $('.nav-btn').on('click', function () {
             $('.nav').toggleClass('showNav');
+            $('.left-bar').toggleClass('show-left-bar');
             $(this).toggleClass('animated2');
         });
 
